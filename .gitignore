@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Build outputs (Netlify will generate these)
+src/output.css
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
