@@ -1,13 +1,10 @@
 function checkPassword() {
-    const input = document.getElementById('passwordInput').value;
-    const correctPassword = 'celebrate';
+    const password = document.getElementById('passwordInput').value;
     
-    if (input === correctPassword) {
-        // Hide prompt, show content
-        document.getElementById('passwordPrompt').style.display = 'none';
-        document.getElementById('mainContent').style.display = 'block';
+    if (password === 'celebrate') {
+        document.getElementById('passwordPrompt').classList.add('hidden');
+        document.getElementById('mainContent').classList.remove('hidden');
     } else {
-        // Show error
         alert('Wrong password');
     }
 }
