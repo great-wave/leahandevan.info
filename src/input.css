@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --font-family-dawning: "Dawning of a New Day", cursive;
+  --font-family-raleway: "Raleway", sans-serif;
+}
