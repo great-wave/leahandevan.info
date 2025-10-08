@@ -9,14 +9,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=La+Belle+Aurore&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         
-        <!-- JavaScript -->
-        <script src="js/script.js" defer></script>
-
         <!--JQuery-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
+        <!-- JavaScript -->
+        <script src="js/script.js" defer></script>
+
+
+
     </head>
-<body>
+<body class="relative">
     <!-- Password prompt (visible initially) -->
     
     <div id="passwordPrompt" class="flex min-h-screen items-center justify-center">
@@ -27,15 +29,15 @@
     
     <!-- Main content (hidden initially) -->
     
-    <div id="mainContent" class="hidden min-h-screen items-center">    
+    <div id="mainContent" class="hidden min-h-screen items-center z-0">    
     
         <header class="flex flex-col items-center">
 
             <div class="lg:hidden">
-                <button id="menu_button" class="font-['Raleway'] font-light border px-2 my-8 active:text-amber-600"">MENU</button>
+                <button id="menuButton" class="font-['Raleway'] font-light md:text-2xl border px-2 my-8 active:text-amber-600"">MENU</button>
             </div>
             
-            <nav class="hidden lg:flex space-x-6 font-['Raleway'] md:text-lg font-light my-10">
+            <nav class="hidden lg:flex space-x-8 font-['Raleway'] lg:text-2xl font-light my-10">
                 <a href="#" class="hover:underline hover:text-amber-600">Home</a>
                 <a href="#" class="hover:underline hover:text-amber-600">Schedule</a>
                 <a href="#" class="hover:underline hover:text-amber-600">Travel</a>
@@ -45,7 +47,7 @@
                 <a href="#" class="hover:underline hover:text-amber-600">RSVP</a>
             </nav>
 
-            <div class="w-32 md:w-48 mx-auto">
+            <div class="w-32 md:w-56 mx-auto">
                 <img src="assets/champage_01_transparent.png" alt="sketch of champagne toast">
             </div>
 
@@ -53,24 +55,41 @@
         
         <div class="flex flex-col gap-4 text-center sm:my-6 md:my-8">
             
-            <div class="text-4xl md:text-5xl">
+            <div class="text-4xl md:text-6xl">
                 <h2 class="font-['Dawning_of_a_New_Day']">Leah Nagy</h2>
                 <h2 class="font-['Dawning_of_a_New_Day']">and Evan Bluestein</h2>
             </div>
             
-            <div class="text-3xl md:text-4xl leading-none">
+            <div class="text-3xl md:text-5xl leading-none">
                 <p class="font-['Dawning_of_a_New_Day']">invite you to their wedding</p>
                 <p class="font-['Dawning_of_a_New_Day']">in Santa Barbara, California</p>
             </div>
 
-            <p class="text-3xl md:text-4xl font-['Dawning_of_a_New_Day']">January 24, 2026</p>
+            <p class="text-3xl md:text-5xl font-['Dawning_of_a_New_Day']">January 24, 2026</p>
         
         </div>
             
             <div>
-                <button id="rsvp_button" class="font-['Raleway'] font-light md:text-2xl border px-2 my-8 hover:text-amber-600 active:text-amber-600">RSVP</button>
+                <button id="rsvp_button" class="font-['Raleway'] font-light md:text-2xl lg:text-3xl border px-2 my-8 hover:text-amber-600 active:text-amber-600">RSVP</button>
             </div>
 
     </div>
+
+    <!-- Mobile Menu Overlay -->
+
+    <div id="mobileMenuOverlay" class="hidden flex flex-col fixed inset-0 min-h-screen items-center justify-center z-50 bg-white bg-opacity-85">    
+
+                <a href="#" class="hover:underline hover:text-amber-600">Home</a>
+                <a href="#" class="hover:underline hover:text-amber-600">Schedule</a>
+                <a href="#" class="hover:underline hover:text-amber-600">Travel</a>
+                <a href="#" class="hover:underline hover:text-amber-600">Registry</a>
+                <a href="#" class="hover:underline hover:text-amber-600">Things to Do</a>
+                <a href="#" class="hover:underline hover:text-amber-600">FAQs</a>
+                <a href="#" class="hover:underline hover:text-amber-600">RSVP</a>
+                <a href="#" class="hover:underline hover:text-amber-600">Close</a>
+
+    </div>
+
+    
 </body>
 </html>

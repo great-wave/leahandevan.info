@@ -11,3 +11,7 @@ function checkPassword() {
         alert('Wrong password');
     }
 }
+
+$('#menuButton').on('click', () => {
+    $('#mobileMenuOverlay').toggleClass('hidden');
+});
