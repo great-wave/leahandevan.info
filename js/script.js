@@ -13,11 +13,23 @@ function checkPassword() {
         console.log('About to attach menu listeners');
 
         $('#menuButton').on('click', () => {
-            $('#mobileMenuOverlay').toggleClass('hidden');
+        const $menu = $('#mobileMenuOverlay');
+        
+        if ($menu.hasClass('hidden')) {
+            // Show menu
+            $menu.removeClass('hidden');
+            setTimeout(() => $menu.removeClass('opacity-0'), 10);
+        } else {
+            // Hide menu
+            $menu.addClass('opacity-0');
+            setTimeout(() => $menu.addClass('hidden'), 300);
+        }
         });
 
         $('#closeLink').on('click', () => {
-            $('#mobileMenuOverlay').toggleClass('hidden');
+        const $menu = $('#mobileMenuOverlay');
+        $menu.addClass('opacity-0');
+        setTimeout(() => $menu.addClass('hidden'), 300);
         });
 
     } else {
@@ -46,11 +58,23 @@ window.addEventListener('DOMContentLoaded', () => {
         document.getElementById('mainContent').classList.add('flex-col');
 
         $('#menuButton').on('click', () => {
-            $('#mobileMenuOverlay').toggleClass('hidden');
+            const $menu = $('#mobileMenuOverlay');
+            
+            if ($menu.hasClass('hidden')) {
+                // Show menu
+                $menu.removeClass('hidden');
+                setTimeout(() => $menu.removeClass('opacity-0'), 10);
+            } else {
+                // Hide menu
+                $menu.addClass('opacity-0');
+                setTimeout(() => $menu.addClass('hidden'), 300);
+            }
         });
 
         $('#closeLink').on('click', () => {
-            $('#mobileMenuOverlay').toggleClass('hidden');
+            const $menu = $('#mobileMenuOverlay');
+            $menu.addClass('opacity-0');
+            setTimeout(() => $menu.addClass('hidden'), 300);
         });
         
         // Set authenticated flag for future pages in this session

@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="src/output.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=La+Belle+Aurore&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=La+Belle+Aurore&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
         
         <!--JQuery-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -31,13 +31,15 @@
     
     <div id="mainContent" class="hidden min-h-screen relative  z-0">    
     
-        <header class="absolute top-0 left-0 right-0 flex flex-col items-center z-10">
+        <header class="absolute top-10 left-0 right-0 flex flex-col items-center z-10">
 
-            <div class="lg:hidden">
-                <button id="menuButton" class="font-['Raleway'] font-light md:text-2xl border px-2 my-8 active:text-amber-600">MENU</button>
+            <!-- Menu Button -->
+
+            <div class="md:hidden">
+                <button id="menuButton" class="font-['Raleway'] font-light text-2xl md:text-2xl lg:text-3xl border px-2 my-8 active:text-amber-600">MENU</button>
             </div>
             
-            <nav class="hidden lg:flex space-x-8 font-['Raleway'] lg:text-2xl font-light my-10">
+            <nav class="hidden md:flex space-x-8 font-['Raleway'] md:text-xl lg:text-2xl font-light my-10">
                 <a href="/index.html" class="hover:underline hover:text-amber-600">Home</a>
                 <a href="/html/schedule.html" class="hover:underline hover:text-amber-600">Schedule</a>
                 <a href="/html/travel.html" class="hover:underline hover:text-amber-600">Travel</a>
@@ -56,7 +58,7 @@
             </div>
 
         
-            <div class="flex flex-col items-center gap-4 text-center sm:my-6 md:my-8">
+            <div class="flex flex-col items-center gap-4 text-center my-6 md:my-8">
                 
                 <div class="text-4xl md:text-6xl">
                     <h2 class="font-['Dawning_of_a_New_Day']">Leah Nagy</h2>
@@ -72,8 +74,10 @@
             
             </div>
             
+            <!-- RSVP Button -->
+
             <div>
-                <button id="rsvpButton" class="font-['Raleway'] font-light md:text-2xl lg:text-3xl border px-2 my-8 hover:text-amber-600 active:text-amber-600">RSVP</button>
+                <button id="rsvpButton" class="font-['Raleway'] font-light text-2xl md:text-2xl lg:text-3xl border px-2 my-8 hover:text-amber-600 active:text-amber-600">RSVP</button>
             </div>
         
         </div>
@@ -82,16 +86,16 @@
 
     <!-- Mobile Menu Overlay -->
 
-    <div id="mobileMenuOverlay" class="hidden flex flex-col fixed inset-0 min-h-screen items-center justify-center z-50 bg-white bg-opacity-85">    
+    <div id="mobileMenuOverlay" class="hidden flex flex-col fixed inset-0 min-h-screen items-center justify-center z-50 bg-white font-['Roboto_Mono'] transition-opacity duration-300 opacity-0 text-2xl gap-2">    
 
-                <a href="/index.html" class="active:text-amber-600">Home</a>
-                <a href="/html/schedule.html" class="active:text-amber-600">Schedule</a>
-                <a href="/html/travel.html" class="active:text-amber-600">Travel</a>
-                <a href="/html/registry.html" class="active:text-amber-600">Registry</a>
-                <a href="/html/things.html" class="active:text-amber-600">Things to Do</a>
-                <a href="/html/faqs.html" class="active:text-amber-600">FAQs</a>
+                <a href="/index.html" class="active:text-amber-600">HOME</a>
+                <a href="/html/schedule.html" class="active:text-amber-600">SCHEDULE</a>
+                <a href="/html/travel.html" class="active:text-amber-600">TRAVEL</a>
+                <a href="/html/registry.html" class="active:text-amber-600">REGISTRY</a>
+                <a href="/html/things.html" class="active:text-amber-600">THINGS TO DO</a>
+                <a href="/html/faqs.html" class="active:text-amber-600">FAQS</a>
                 <a href="/html/rsvp.html" class="active:text-amber-600">RSVP</a>
-                <a id="closeLink" href="#" class="active:text-amber-600">Close</a>
+                <a id="closeLink" href="#" class="active:text-amber-600">CLOSE</a>
 
     </div>
 
