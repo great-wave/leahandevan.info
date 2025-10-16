@@ -1,3 +1,11 @@
+[[redirects]]
+  from = "/*"
+  to = "https://your-zola-wedding-site.zola.com/:splat"
+  status = 301
+  force = true
+
+
 [build]
   command = "npm run build"
   publish = "."
+
