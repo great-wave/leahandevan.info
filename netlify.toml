@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/*"
-  to = "https://your-zola-wedding-site.zola.com/:splat"
+  to = "https://www.zola.com/wedding/leahandevan2026/:splat"
   status = 301
   force = true
 
