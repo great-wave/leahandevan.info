@@ -15,7 +15,31 @@
         <!-- JavaScript -->
         <script src="../js/script.js" defer></script>
 
+        <!-- Leaflet CSS and JS -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
+        <style>
+            #map {
+                height: 500px;
+                width: 100%;
+                border-radius: 0.5rem;
+            }
+            .leaflet-popup-content-wrapper {
+                border-radius: 8px;
+                font-family: 'Raleway', sans-serif;
+            }
+            .leaflet-popup-content {
+                margin: 12px 16px;
+            }
+            .leaflet-popup-content a {
+                color: #d97706;
+                text-decoration: underline;
+            }
+            .leaflet-popup-content a:hover {
+                color: #b45309;
+            }
+        </style>
 
     </head>
 <body class="relative">
@@ -72,7 +96,7 @@
                 </div>
                 
                 <div class="flex flex-col gap-1 font-['Raleway']">
-                    <p class="md:text-lg lg:text-2xl">We’re looking forward to spending time with our nearest and dearest in one of our favorite places: Santa Barbara! Our ceremony will take place in the iconic Santa Barbara Courthouse’s Mural Room. From there, we’ll make our way to cocktail hour and dinner in the city’s Funk Zone,  a formerly industrial area of the city that’s become an arts and culinary enclave - we’re counting on all our guests to live up to its name. The Funk Zone is also walking distance to the beach and Stearn’s Wharf, as well as the downtown State Street stretch of hotels, restaurants and shopping, so staying in any of those areas will be convenient!</p>
+                    <p class="md:text-lg lg:text-2xl">We're looking forward to spending time with our nearest and dearest in one of our favorite places: Santa Barbara! Our ceremony will take place in the iconic Santa Barbara Courthouse's Mural Room. From there, we'll make our way to cocktail hour and dinner in the city's Funk Zone,  a formerly industrial area of the city that's become an arts and culinary enclave - we're counting on all our guests to live up to its name. The Funk Zone is also walking distance to the beach and Stearn's Wharf, as well as the downtown State Street stretch of hotels, restaurants and shopping, so staying in any of those areas will be convenient!</p>
                 </div>
 
                 <div class="flex flex-col gap-1 font-['Raleway']">
@@ -87,6 +111,13 @@
                     <a class="md:text-lg lg:text-2xl underline text-amber-600" href="https://www.drifthotels.co/santabarbara " target="_blank" rel="noopener">Website</a>
                     <p class="md:text-lg lg:text-2xl">Kimpton Canary Santa Barbara</p>
                     <a class="md:text-lg lg:text-2xl underline text-amber-600" href="https://www.canarysantabarbara.com/  " target="_blank" rel="noopener">Website</a>
+                </div>
+
+                <!-- Map Section -->
+                <div class="flex flex-col gap-4 font-['Raleway'] w-full mt-6">
+                    <h3 class="text-lg md:text-2xl lg:text-3xl font-semibold">Map</h3>
+                    <p class="md:text-lg lg:text-2xl">Click on markers to view venue and hotel details</p>
+                    <div id="map"></div>
                 </div>
 
             
@@ -116,6 +147,7 @@
                 <a id="closeLink" href="#" class="active:text-amber-600">CLOSE</a>
 
     </div>
+
 
     
 </body>
